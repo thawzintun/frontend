@@ -71,7 +71,7 @@ export const loader = async ({ params }) => {
 };
 
 export const action = async ({ params }) => {
-    const response = await fetch(`http://localhost:8080/pots/${params.id}`, {
+    const response = await fetch(`http://localhost:8080/posts/${params.id}`, {
         method: "DELETE",
     });
 

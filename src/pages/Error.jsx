@@ -11,7 +11,7 @@ const Error = () => {
                 <p>404 Error!</p>
                 <p>Something went wrong</p>
                 <Link
-                    to={navigate(0)}
+                    reloadDocument
                     className="bg-black text-white px-4 py-2 mt-3"
                 >
                     Go Back
