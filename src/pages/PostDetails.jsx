@@ -2,16 +2,14 @@ import React from "react";
 import {
     Link,
     redirect,
-    useLoaderData,
-    useParams,
+    useRouteLoaderData,
     useSubmit,
 } from "react-router-dom";
 import { ArrowLeftIcon, CalendarDaysIcon } from "@heroicons/react/24/solid";
 
 const PostDetails = () => {
-    const data = useLoaderData();
-    const postData = data.post;
-    const params = useParams();
+    const data = useRouteLoaderData("post-detail");
+    const { id, title, date, image, description } = data.post;
     const submit = useSubmit();
 
     const postDeleteHandler = () => {
@@ -27,22 +25,20 @@ const PostDetails = () => {
     return (
         <section className=" w-3/5 mx-auto flex flex-col justify-center py-5 gap-y-2">
             <div className="flex justify-between items-start py-3">
-                <h1 className="text-2xl font-bold">{postData.title}</h1>
+                <h1 className="text-2xl font-bold">{title}</h1>
                 <Link to={"/"} className="">
                     <ArrowLeftIcon className="w-8" />
                 </Link>
             </div>
             <p className="text-slate-500 flex gap-x-1 items-center py-2">
                 <CalendarDaysIcon className="w-6" />
-                {postData.date}
+                {date}
             </p>
-            <img src={postData.image} alt={postData.title} />
-            <p className=" text-justify py-2 text-slate-600">
-                {postData.description}
-            </p>
+            <img src={image} alt={title} />
+            <p className=" text-justify py-2 text-slate-600">{description}</p>
             <div className="flex justify-end gap-x-3">
                 <Link
-                    to={`/edit/${params.id}`}
+                    to={`/${id}/edit`}
                     className=" px-4 py-2 text-white bg-black"
                 >
                     Edit

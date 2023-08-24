@@ -1,9 +1,8 @@
 import { ExclamationTriangleIcon } from "@heroicons/react/24/solid";
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Error = () => {
-    const navigate = useNavigate();
     return (
         <section className="grid grid-flow-col justify-center items-center h-screen">
             <div className="flex flex-col justify-center items-center">

@@ -6,7 +6,7 @@ const PostItem = ({ post }) => {
     const { id, title, image, date } = post;
     return (
         <div className="w-2/5 shadow-md">
-            <Link to={`details/${id}`}>
+            <Link to={`/${id}`}>
                 <img
                     src={image}
                     alt={title}
@@ -14,7 +14,7 @@ const PostItem = ({ post }) => {
                 />
             </Link>
             <div className="py-5 px-4 flex flex-col gap-y-3">
-                <Link className="font-extrabold" to={`details/${id}`}>
+                <Link className="font-extrabold" to={`post/${id}`}>
                     <h3>{title}</h3>
                 </Link>
                 <p className="text-slate-500 flex items-center gap-x-1">
