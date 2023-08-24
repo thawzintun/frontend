@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const PostItem = ({ post }) => {
     const { id, title, image, date } = post;
     return (
-        <div className="w-2/5 shadow-md">
+        <div className="w-11/12 sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/5 shadow-md">
             <Link to={`/${id}`}>
                 <img
                     src={image}

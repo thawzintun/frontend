@@ -6,7 +6,7 @@ const Post = () => {
     const data = useLoaderData();
     const posts = data.posts;
     return (
-        <section className=" mx-auto flex flex-col justify-center items-center py-5 gap-y-10">
+        <section className="mx-auto flex flex-col justify-center items-center py-5 gap-y-10">
             {posts.length > 0 &&
                 posts.map((post) => <PostItem key={post.id} post={post} />)}
         </section>
