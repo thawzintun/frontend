@@ -1,6 +1,6 @@
 import React from "react";
 import PostForm from "../components/PostForm";
-import { redirect, useRouteLoaderData } from "react-router-dom";
+import { useRouteLoaderData } from "react-router-dom";
 
 const EditPost = () => {
     const oldData = useRouteLoaderData("post-detail");
